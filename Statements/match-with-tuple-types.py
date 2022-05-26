@@ -1,4 +1,5 @@
 tuple_type = ('petko', 'georgiev')
+# tuple_type = ('ventsi', 'iliev')
 greeting = ''
 
 def uppercase_first(v) :
