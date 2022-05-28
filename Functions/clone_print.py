@@ -9,3 +9,7 @@ def clone_print(str = None, end = '\n') :
 
 out = clone_print('Ventsi is here', end="!")
 print(out)
+
+
+
+max('Ventsi', 'what', key=lambda w: w == 'what')
