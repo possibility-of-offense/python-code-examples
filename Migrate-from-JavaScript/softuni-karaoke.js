@@ -46,26 +46,20 @@ function karaoke(input) {
     if (winningParticipans[key].awards.length) {
       noAwards.push(false);
 
-      if (!sorted.length) {
-        if (winningParticipans[key].awards.length) {
-          sorted.push({ [key]: winningParticipans[key] });
-        }
-      } else {
-        if (winningParticipans[key].awards.length) {
-          sorted.push({ [key]: winningParticipans[key] });
-        }
-
-        sorted.sort((a, b) => {
-          const k = Object.keys(a);
-          const k1 = Object.keys(b);
-
-          if (b[k1].awards.length === a[k].awards.length) {
-            return k[0] - k1[0];
-          } else {
-            return b[k1].awards.length - a[k].awards.length;
-          }
-        });
+      if (winningParticipans[key].awards.length) {
+        sorted.push({ [key]: winningParticipans[key] });
       }
+
+      sorted.sort((a, b) => {
+        const k = Object.keys(a);
+        const k1 = Object.keys(b);
+
+        if (b[k1].awards.length === a[k].awards.length) {
+          return k[0] - k1[0];
+        } else {
+          return b[k1].awards.length - a[k].awards.length;
+        }
+      });
     } else {
       noAwards.push(true);
     }
