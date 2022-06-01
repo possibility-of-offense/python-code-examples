@@ -13,6 +13,7 @@ match points :
     case [[1, y1], [1, y2], [1, y3], *rest] :
         out = 'The leftover point is with coordinate of '
         for p in range(len(rest)) :
+            # Ternary operator
             comma = ', ' if p < len(rest) -1 else ''
             out += str(rest[p][0]) + ' ' + str(rest[p][1]) + comma
 
