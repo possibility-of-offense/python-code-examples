@@ -33,12 +33,5 @@ for line in file_handle :
     sliced_str = line[ind + 1:]
     lists.append(sliced_str.strip())
 
-    for char in line :
-        if char != '[' :
-            continue
-        else :
-            build_list += char
-
-
 c = compare_lists(*lists)
 print(c)
