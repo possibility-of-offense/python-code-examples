@@ -22,6 +22,23 @@ def compare_lists(a, b) :
 
     return returned_out
             
+file_handle = open('../lists.txt')
 
-c = compare_lists(list1, list2)
+lists = []
+
+for line in file_handle :
+    
+    build_list = ''
+    ind = line.index('=')
+    sliced_str = line[ind + 1:]
+    lists.append(sliced_str.strip())
+
+    for char in line :
+        if char != '[' :
+            continue
+        else :
+            build_list += char
+
+
+c = compare_lists(*lists)
 print(c)
