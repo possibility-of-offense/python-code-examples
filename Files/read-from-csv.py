@@ -63,4 +63,6 @@ while ind < len(unique) :
     ind = ind + 1
 
 write_handle = open('../members.txt', 'w')
-write_handle.write(str_to_put_in_file)
+write_handle.write(str_to_put_in_file)\
+
+write_handle.close()
