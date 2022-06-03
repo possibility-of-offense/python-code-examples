@@ -52,10 +52,15 @@ inp = input("Enter a file name: \n")
 unique = read_from_a_file(inp)
 
 ind = 0
+str_to_put_in_file = ''
+
 while ind < len(unique) :
     members = ' and '.join(unique[ind][1]) 
     formatted_str = unique[ind][0].replace('\'', ' | ')
     formatted_str = formatted_str.upper()
 
-    print(f'The unique project is{formatted_str}and the members are {members}!')
+    str_to_put_in_file += f'The unique project is{formatted_str}and the members are {members}! \n'
     ind = ind + 1
+
+write_handle = open('../members.txt', 'w')
+write_handle.write(str_to_put_in_file)
