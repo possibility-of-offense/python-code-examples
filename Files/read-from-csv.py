@@ -35,10 +35,12 @@ def read_from_a_file(f) :
                             
 
                     else :
-                        continue
+                        pass
+                        # continue
 
             except :
-                continue
+                pass
+                # continue
 
     unique_projects = []
     for item in find_common_projects.items() :
