@@ -64,7 +64,7 @@ while ind < len(unique) :
     str_to_put_in_file += f'The unique project is{formatted_str}and the members are {members}! \n'
     ind = ind + 1
 
-write_handle = open('../members.txt', 'w')
+write_handle = open('../members.txt', 'a')
 write_handle.write(str_to_put_in_file)\
 
 write_handle.close()
