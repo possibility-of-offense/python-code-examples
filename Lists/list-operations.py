@@ -19,3 +19,10 @@ t = ['a', 'b', 'c', 'd', 'e', 'f']
 t[1:3] = ['x', 'y']
 print(t)
 ['a', 'x', 'y', 'd', 'e', 'f']
+
+# To remove more than one element, you can use del with a slice index:
+
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+del t[1:5]
+print(t)
+['a', 'f']
