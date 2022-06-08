@@ -12,3 +12,10 @@ print(c)
 [1, 2, 3] * 3
 [1, 2, 3, 1, 2, 3, 1, 2, 3]
 # # The first example repeats four times. The second example repeats the list three times.
+
+# A slice operator on the left side of an assignment can update multiple elements:
+
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+t[1:3] = ['x', 'y']
+print(t)
+['a', 'x', 'y', 'd', 'e', 'f']
