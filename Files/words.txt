@@ -1,0 +1,4 @@
+The first loop builds a list of tuples, where each tuple is a word preceded by its length.
+sort compares the first element, length, first, and only considers the second element to break ties. The keyword argument reverse=True tells sort to go in decreasing order.
+The second loop traverses the list of tuples and builds a list of words in descending order of length. The four-character words are sorted in reverse alphabetical order, so “what” appears before “soft” in the following list.
+The biggest word is reverse=True!
