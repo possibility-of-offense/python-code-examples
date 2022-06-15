@@ -39,3 +39,21 @@ import re
 
 # backreference
 
+# m = re.match("(?:[abc])+", "abc")
+# print(m.groups())
+
+# my_str = 'Ventsi 123 what 123 test 123'
+
+# new_s = re.split(r'\d{3}', my_str)
+# print(new_s)
+
+# p = re.compile('x')
+# new_p = p.sub('-', 'abxxxd')
+# print(new_p)
+
+init_str = 'My name is blah Ventsislav'
+# mapping = init_str.maketrans('blah', 'nqay')
+
+# init_str = init_str.replace('blah', '')
+init_str = re.sub('\sblah', '', init_str)
+print(init_str)
