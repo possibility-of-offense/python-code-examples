@@ -5,11 +5,11 @@ url = input('Enter url - ')
 html = urllib.request.urlopen(url).read()
 parse_html = BeautifulSoup(html, 'html.parser')
 
-heading = parse_html.find(string="The Second Page")
-print(heading.parent)
+# heading = parse_html.find(string="The Second Page")
+# print(heading.parent)
 
 anch = parse_html.find('a')
-# print(anch.parent)
+print(anch.parent)
 
 # tags = parse_html.find_all('a')
 # for tag in tags :
