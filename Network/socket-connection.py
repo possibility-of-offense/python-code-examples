@@ -6,6 +6,7 @@ cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 mysock.send(cmd)
 
 data_received = ''
+f_handle = open('romeo.txt', 'w')
 
 while True :
     data = mysock.recv(1000)
@@ -15,4 +16,5 @@ while True :
 
 mysock.close()
 
-print(data_received)
+split_data = data_received.split('\r\n\r\n')
+f_handle.write(split_data[1].strip())
